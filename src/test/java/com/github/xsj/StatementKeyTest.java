@@ -26,7 +26,7 @@ public class StatementKeyTest {
 
     @BeforeClass
     public static void setUp() throws Exception{
-        Reader reader = Resources.getResourceAsReader("mybatis-config.xml");
+        Reader reader = Resources.getResourceAsReader("mybatis-test-config.xml");
         sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
         reader.close();
         // 数据初始化
