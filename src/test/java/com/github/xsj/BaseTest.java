@@ -70,8 +70,7 @@ public class BaseTest {
             user.setName(expectedStr);
             mapper.insertUser(user);
             session.commit();
-            assertThat(mapper.getUser(2).getName(), is(equalTo(expectedStr)));
-            log.info(String.valueOf(mapper.getUser(2)));
+            assertThat(mapper.getUser(user.getId()).getName(), is(equalTo(expectedStr)));
         } finally {
             session.close();
         }

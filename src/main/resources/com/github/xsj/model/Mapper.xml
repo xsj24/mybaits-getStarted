@@ -7,7 +7,7 @@
         select * from users where id = #{id}
     </select>
 
-    <insert id="insertUser">
-        insert into users values(#{id}, #{name})
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id" keyColumn="ID">
+          insert into users values(#{id}, #{name})
     </insert>
 </mapper>
